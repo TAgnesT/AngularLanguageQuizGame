@@ -1,0 +1,23 @@
+nav{
+    background-color: black;
+    padding: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav a {
+    color: white;
+    line-height: 50px;
+    padding: 10px;
+    text-decoration: none;
+}
+
+nav a:hover{
+    color: rgb(118, 255, 60);
+    font-size: 3.2ex;
+    font-weight: 600;
+}
+
+section{
+    padding: 0px 10px;
+}

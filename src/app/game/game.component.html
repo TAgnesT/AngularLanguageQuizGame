@@ -1,0 +1,22 @@
+<div class="gamediv">
+    <h3>{{this.service.actualGameWord.hun}}</h3>
+    <input *ngIf="!this.service.resultState" [(ngModel)]="this.service.actualTry" type="text" />
+    <button *ngIf="!this.service.resultState" (click)="this.service.check()">Check!</button>
+    <div class="btnd" *ngIf="this.service.resultState">
+        <p *ngIf="this.service.actualGameWord.eng == this.service.actualTry" style="color: rgb(61, 180, 10); font-weight: 800; margin-top: 2rem;">Correct!</p>
+        <p *ngIf="this.service.actualGameWord.eng != this.service.actualTry" style="color: rgb(252, 86, 68); font-weight: 800; margin-top: 2rem;">
+            Incorrect ... the answer is: </p>
+        <p class="answer">{{this.service.actualGameWord.eng}}</p>
+        <button class="checkbtn"
+            *ngIf="this.service.gameWords.length > 0"
+            (click)="this.service.next()">Next word!</button>
+        <hr>
+        <h4>Word: {{this.service.actualGameWord.hun}}</h4>
+        <label>Total Good tries | Total Bad tries</label>
+        <div class="totals">
+        <p class="totalgood">{{this.service.actualGameWord.goods}}</p>
+        <p class="line">|</p>
+        <p class="totalbad">{{this.service.actualGameWord.bads}}</p>
+        </div>
+    </div>
+</div>

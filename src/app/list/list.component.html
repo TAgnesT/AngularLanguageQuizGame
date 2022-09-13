@@ -1,0 +1,39 @@
+<div class="listtitle">
+<h1>Manage your words</h1>
+<p>Set up your exam! Save some words for playing the game. Enjoy!</p>
+</div>
+
+<div class="formdiv">
+    <label>Word in hungarian</label>
+    <input [(ngModel)] = "this.service.actualWord.hun" type="text" />
+    <label>Word in english</label>
+    <input [(ngModel)] = "this.service.actualWord.eng" type="text" />
+    <button (click)="this.service.add()">Add word</button>
+</div>
+
+<div class="info">
+    <p>Your library and results</p>
+</div>
+
+<div class="arrow">
+    <img src="https://vectorified.com/images/down-arrow-icon-png-9.png" alt="arrow" />
+</div>
+
+<div class="words">
+    <table>
+        <tr>
+            <th>Hungarian</th>
+            <th>English</th>
+            <th>Good tries</th>
+            <th>Bad tries</th>
+            <th>Actions</th>
+        </tr>
+        <tr *ngFor="let w of this.service.words">
+            <td>{{w.hun}}</td>
+            <td>{{w.eng}}</td>
+            <td>{{w.goods}}</td>
+            <td>{{w.bads}}</td>
+            <td><button (click)="this.service.remove(w.id)">Delete</button></td>
+        </tr>
+    </table>
+</div>

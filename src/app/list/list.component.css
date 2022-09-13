@@ -1,0 +1,54 @@
+.listtitle{
+    text-align: center;
+    margin: 2rem;
+}
+
+.listtitle p{
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.info{
+    display: flex;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 300;
+    margin-bottom: -1rem;
+}
+
+.arrow{
+    display: flex;
+    justify-content: center;
+}
+
+.arrow img{
+    width: 100px;
+    margin-bottom: 2rem;
+}
+
+table{
+    border-collapse: collapse;
+    width: 90%;
+    margin: 2rem auto;
+}
+
+table button{
+    margin: 0 auto;
+    background-color: rgb(118, 255, 60);
+    border: none;
+}
+
+table button:hover{
+    cursor: pointer;
+    background-color: rgb(252, 86, 68);
+}
+
+td, th{
+    border: 1px solid rgba(20, 60, 3, 0.627);
+    padding: 10px;
+    text-align: center;
+}
+
+th{
+    background-color: rgb(219, 255, 99);
+}
